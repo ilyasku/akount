@@ -21,7 +21,7 @@ setup(name='akount',
       entry_points={
           "console_scripts": [
               'akount-calculate-balance=akount.CLI.calculate_balance:main',
-              'akount-generate-people-list=akount.CLI.generate_people_list:main'
+              'akount-create-invoice-files=akount.CLI.create_invoice_files:main'
           ],
           "gui_scripts": [
           ]
