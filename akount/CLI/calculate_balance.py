@@ -30,7 +30,7 @@ def main():
         people_dc['Weight-fraction'] = people_dc['Weight']/weight_total
         total_price = 0.0
         for row in invoices.iterrows():
-            name, amount = row[1]
+            name, amount = row[1][:2]
             if name.strip() not in people_dc['Name'].values:
                 raise RuntimeError(
                     'Name "{}" of invoice not in list of people for date {}!'.format(
