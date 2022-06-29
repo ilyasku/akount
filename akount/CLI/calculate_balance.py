@@ -37,6 +37,9 @@ def main():
                         name, inv))
             total_price += amount
             people.loc[name, 'Balance'] += amount
+        msg = "{:<30}: {:>5.2f} per person".format(inv, total_price / weight_total)        
+        print(msg)
+        print('-'*len(msg))
         for name in people_dc['Name']:
             people.loc[name, 'Balance'] -= total_price * people_dc.loc[name, 'Weight-fraction']
 
